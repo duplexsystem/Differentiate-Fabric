@@ -26,6 +26,9 @@
   "entrypoints": {
     "main": [
       "co.eltrut.differentiate.core.Differentiate"
+    ],
+    "client": [
+      "co.eltrut.differentiate.client.DifferentiateClient"
     ]
   },
   "accessWidener" : "differentiate.accesswidener",

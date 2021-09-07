@@ -20,6 +20,8 @@ public class Differentiate  implements ModInitializer {
 
     protected boolean test = false;
 
+    //TODO Make AxeItem Mixin
+
     @Override
     public void onInitialize() {
         if (test) {
