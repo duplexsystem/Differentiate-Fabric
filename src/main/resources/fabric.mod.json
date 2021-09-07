@@ -1,29 +1,36 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "differentiate",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Differentiate",
+  "description": "A modding library for Eltrut & Co.",
   "authors": [
-    "Me!"
+    "Eltrut & Co."
+  ],
+  "contributors": [
+    "EltrutLikes",
+    "StevenPlayzz",
+    "JustinPlayzz"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Eltrut-Co/Differentiate-Fabric",
+    "issues": "https://github.com/Eltrut-Co/Differentiate-Fabric/issues"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "CC BY-NC-SA 3.0",
+  "icon": "assets/differentiate/differentiate.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "co.eltrut.differentiate.core.Differentiate"
     ]
   },
+  "accessWidener" : "differentiate.accesswidener",
   "mixins": [
-    "modid.mixins.json"
+    "differentiate.mixins.json"
   ],
 
   "depends": {
