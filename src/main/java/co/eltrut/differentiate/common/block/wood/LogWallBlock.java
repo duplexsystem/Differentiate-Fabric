@@ -39,6 +39,7 @@ public class LogWallBlock extends WallBlock implements IFlammableBlock {
 		super(settings);
 		this.strippedBlock = strippedBlock;
 		this.isNetherWood = isNetherWood;
+
 	}
 
 	@Override
