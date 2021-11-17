@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.9-SNAPSHOT'
+	id 'fabric-loom' version '0.10-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -15,6 +15,17 @@ repositories {
 		name = 'Shedaniel'
 		url "https://maven.shedaniel.me/"
 	}
+	maven {
+		name = 'Jitpack'
+		url 'https://jitpack.io'
+		content {
+			includeGroup "com.github.Chocohead"
+		}
+	}
+	maven {
+		name = 'Devan Maven'
+		url 'https://storage.googleapis.com/devan-maven/'
+	}
 }
 
 loom {
@@ -28,9 +39,12 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	// Cloth Api //
-	modCompileOnly "me.shedaniel.cloth.api:cloth-api:${project.cloth_api_version}"
-	modRuntime "me.shedaniel.cloth.api:cloth-api:${project.cloth_api_version}"
+	// Fabric-ASM //
+	modImplementation "com.github.Chocohead:Fabric-ASM:${project.asm_version}"
+	include "com.github.Chocohead:Fabric-ASM:${project.asm_version}"
+
+	modImplementation "net.devtech:arrp:${project.arrp_version}"
+	include "net.devtech:arrp:${project.arrp_version}"
 }
 
 processResources {

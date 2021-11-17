@@ -1,5 +1,8 @@
 accessWidener	v1	named
 
 accessible field net/minecraft/block/DispenserBlock BEHAVIORS Ljava/util/Map;
+accessible field net/minecraft/entity/vehicle/BoatEntity$Type baseBlock Lnet/minecraft/block/Block;
+
 accessible method net/minecraft/block/StairsBlock <init> (Lnet/minecraft/block/BlockState;Lnet/minecraft/block/AbstractBlock$Settings;)V
+
 accessible class net/minecraft/block/entity/BlockEntityType$BlockEntityFactory

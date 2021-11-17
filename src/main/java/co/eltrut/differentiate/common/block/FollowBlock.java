@@ -8,15 +8,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.collection.DefaultedList;
 
 public class FollowBlock extends Block {
-	private final Item followItem;
+    private final Item followItem;
 
-	public FollowBlock(Settings settings, Item followItem) {
-		super(settings);
-		this.followItem = followItem;
-	}
-	
-	@Override
-	public void appendStacks(ItemGroup group, DefaultedList<ItemStack> items) {
-		GroupUtil.fillItem(this.asItem(), followItem, group, items);
-	}
+    public FollowBlock(Settings settings, Item followItem) {
+        super(settings);
+        this.followItem = followItem;
+    }
+
+    @Override
+    public void appendStacks(ItemGroup group, DefaultedList<ItemStack> items) {
+        GroupUtil.fillItem(this.asItem(), followItem, group, items);
+    }
 }

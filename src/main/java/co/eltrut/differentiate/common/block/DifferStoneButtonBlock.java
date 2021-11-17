@@ -8,12 +8,12 @@ import net.minecraft.item.Items;
 import net.minecraft.util.collection.DefaultedList;
 
 public class DifferStoneButtonBlock extends StoneButtonBlock {
-	public DifferStoneButtonBlock(Settings settings) {
-		super(settings);
-	}
-	
-	@Override
-	public void appendStacks(ItemGroup group, DefaultedList<ItemStack> items) {
-		GroupUtil.fillItem(this.asItem(), Items.POLISHED_BLACKSTONE_BUTTON, group, items);
-	}
+    public DifferStoneButtonBlock(Settings settings) {
+        super(settings);
+    }
+
+    @Override
+    public void appendStacks(ItemGroup group, DefaultedList<ItemStack> items) {
+        GroupUtil.fillItem(this.asItem(), Items.POLISHED_BLACKSTONE_BUTTON, group, items);
+    }
 }

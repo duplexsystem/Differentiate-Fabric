@@ -10,23 +10,23 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 
 public class BlockUtil {
-	public static BlockState transferAllBlockStates(BlockState initial, BlockState end) {
-		BlockState state = end;
+    public static BlockState transferAllBlockStates(BlockState initial, BlockState end) {
+        BlockState state = end;
 
-		for (Property property : initial.getProperties()) {
-			state = state.with(property, initial.get(property));
-		}
-		return state;
-	}
+        for (Property property : initial.getProperties()) {
+            state = state.with(property, initial.get(property));
+        }
+        return state;
+    }
 
-	public static void registerDispenserBehavior(Item item, Block block, DispenserBehavior newBehavior) {
-		DispenserBehavior oldBehavior = DispenserBlock.BEHAVIORS.get(item);
-		DispenserBlock.registerBehavior(item, (source, stack) -> {
-			Direction dir = source.getBlockState().get(DispenserBlock.FACING);
-			BlockPos pos = source.getPos().offset(dir);
-			BlockState state = source.getWorld().getBlockState(pos);
+    public static void registerDispenserBehavior(Item item, Block block, DispenserBehavior newBehavior) {
+        DispenserBehavior oldBehavior = DispenserBlock.BEHAVIORS.get(item);
+        DispenserBlock.registerBehavior(item, (source, stack) -> {
+            Direction dir = source.getBlockState().get(DispenserBlock.FACING);
+            BlockPos pos = source.getPos().offset(dir);
+            BlockState state = source.getWorld().getBlockState(pos);
 
-			return state.isOf(block) ? newBehavior.dispense(source, stack) : oldBehavior.dispense(source, stack);
-		});
-	}
+            return state.isOf(block) ? newBehavior.dispense(source, stack) : oldBehavior.dispense(source, stack);
+        });
+    }
 }

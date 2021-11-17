@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "differentiate",
   "version": "${version}",
-
   "name": "Differentiate",
   "description": "A modding library for Eltrut & Co.",
   "authors": [
@@ -18,10 +17,8 @@
     "sources": "https://github.com/Eltrut-Co/Differentiate-Fabric",
     "issues": "https://github.com/Eltrut-Co/Differentiate-Fabric/issues"
   },
-
   "license": "CC BY-NC-SA 3.0",
   "icon": "assets/differentiate/differentiate.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -29,20 +26,19 @@
     ],
     "client": [
       "co.eltrut.differentiate.client.DifferentiateClient"
+    ],
+    "mm:early_risers": [
+      "co.eltrut.differentiate.core.DifferentiateEarlyRiser"
     ]
   },
-  "accessWidener" : "differentiate.accesswidener",
+  "accessWidener": "differentiate.accesswidener",
   "mixins": [
     "differentiate.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
+    "minecraft": "1.18.x",
     "java": ">=16"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

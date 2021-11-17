@@ -10,22 +10,22 @@ import net.minecraft.item.Items;
 import net.minecraft.util.collection.DefaultedList;
 
 public class WoolBlock extends Block implements IFlammableBlock {
-	public WoolBlock(Settings settings) {
-		super(settings);
-	}
+    public WoolBlock(Settings settings) {
+        super(settings);
+    }
 
-	@Override
-	public int getEncouragement() {
-		return FlammableChance.WOOL.getLeft();
-	}
+    @Override
+    public void appendStacks(ItemGroup group, DefaultedList<ItemStack> items) {
+        GroupUtil.fillItem(this.asItem(), Items.BLACK_WOOL, group, items);
+    }
 
-	@Override
-	public int getFlammability() {
-		return FlammableChance.WOOL.getRight();
-	}
+    @Override
+    public int getEncouragement() {
+        return FlammableChance.WOOL.getLeft();
+    }
 
-	@Override
-	public void appendStacks(ItemGroup group, DefaultedList<ItemStack> items) {
-		GroupUtil.fillItem(this.asItem(), Items.BLACK_WOOL, group, items);
-	}
+    @Override
+    public int getFlammability() {
+        return FlammableChance.WOOL.getRight();
+    }
 }

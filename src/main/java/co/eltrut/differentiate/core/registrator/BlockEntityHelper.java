@@ -9,11 +9,11 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class BlockEntityHelper extends AbstractHelper {
-	public BlockEntityHelper(Registrator parent) {
-		super(parent);
-	}
-	
-	public <T extends BlockEntity> BlockEntityType<T> createBlockEntity(String name, BlockEntityType.BlockEntityFactory<? extends T> tileEntity, Block[] blocks) {
-		return Registry.register(Registry.BLOCK_ENTITY_TYPE, this.parent.id(name), new BlockEntityType<T>(tileEntity, new HashSet<Block>(Arrays.asList(blocks)), null));
-	}
+    public BlockEntityHelper(Registrator parent) {
+        super(parent);
+    }
+
+    public <T extends BlockEntity> BlockEntityType<T> createBlockEntity(String name, BlockEntityType.BlockEntityFactory<? extends T> tileEntity, Block[] blocks) {
+        return Registry.register(Registry.BLOCK_ENTITY_TYPE, this.parent.id(name), new BlockEntityType<T>(tileEntity, new HashSet<Block>(Arrays.asList(blocks)), null));
+    }
 }
